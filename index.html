@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>강박증 앨리스</title>
+	<script type="text/javascript" src="wow.min.js"></script>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+		@font-face {
+    	font-family: 'Cafe24Simplehae';
+    	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff');
+    	font-weight: normal;
+    	font-style: normal;}
+
+		body,h1,h2,h3,p,img,div{margin:0; padding: 0;}
+
+		.intro{position: relative; z-index: 2;}
+    	.fall1 h1{font-family: 'Nanum Myeongjo', serif; font-weight: 800; font-size: 10em; color: white; width: 200px; text-align: center; display: block; position: absolute; left: 45%; top:-400px;}
+    	.s1apple h1{font-family: 'Nanum Myeongjo', serif; font-weight: 800; font-size: 50em; color: white; width: 200px; text-align: center; display: block; position: absolute; left: 19%; top:150px;}
+
+		body{background-color: black; overflow-x:hidden; overflow-y:auto;}
+		.blackdiv700{background-color: black; height: 700px;}
+		.blackdiv350{background-color: black; height: 350px; z-index: 1;}
+		.blackgrad350{background: rgb(0,0,0);
+			background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); height: 350px; z-index: 1;}
+		.black{background-color: black;}
+		.blackcover{background-color: black; display:block; z-index: 2; width: 1200px;margin: auto;}
+		.paper{background-image: url(bg.jpg);}
+		.centerfix{display: block; margin:auto;}
+
+		.fall1{background-image: url(inficlock.gif); background-size: cover; width: 1200px; height: 1920px; display: block; margin: auto; position: relative; perspective: 900; z-index: 2;}
+
+		.blackgradient{background: rgb(0,0,0);
+			background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0) 100%); height: 1100px; z-index: 0;}
+		.blackgradient_rev{background: rgb(0,0,0);
+			background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0) 100%); height: 500px;}
+		.fallice1{position: absolute; width: 300px; left: 40%; top: 470px; animation: aliceshoo 5s infinite linear;}
+
+		#falldoor1{position: absolute; width: 120px; left: 220px; top: -1000px;  animation:turnon 1s infinite alternate;}
+		#falldoor2{position: absolute; width: 160px; left: 800px; top: -400px;  animation: turnon2 1s infinite linear;}
+		#fallcloset{position: absolute; width: 520px; left: 900px; top: 900px; transform: rotate3D(0.1,0.9,0.8,28deg);}
+		#falltable{position: absolute; width: 500px; left: 970px; top: 1500px; transform: rotate3D(0.0,0.0,0.1,55deg);}
+		#fallmirrdraw{position: absolute; width: 280px; left: 170px; top: 1000px; transform: rotate3D(0.1,0.2,0.4,340deg);}
+		#fallbigsofa{position: absolute; width: 950px; left: 250px; top: 1300px; transform: rotate3D(0.4,0.2,0.2,35deg);}
+		#fall1sofa{position: absolute; width: 300px; left: -190px; top: 870px; transform: rotate3D(0.4,0.2,0.2,25deg);}
+		#fallwallclock{position: absolute; width: 400px; left: -90px; top: 1050px; transform: rotate3D(0.1,0.2,0.1,25deg);}
+		#fallteatable{position:absolute; width:350px; left:-240px; top:1210px; transform:rotate3D(0,0.1,0.8,70deg);}
+		#fallstair{position:absolute; width:310px; left: 600px; top:1400px; animation:hover 1s infinite alternate;}
+
+		.fall2{background-image: url(bg.jpg); width:1200px; height: 4000px; display: block; margin: auto; position: relative; perspective: 900; z-index: -100;}
+		.fall2-1{background-image: url(bg.jpg); width:1200px; height: 4000px; display: block; margin: auto; position: relative; perspective: 900; z-index: 3;}
+
+		.fallice2{position:fixed; width: 300px; display: block; z-index: 0; left: 41%; top: 250px;}
+		.fallback{position: absolute; width: 1400px; left:-12%; top:-200px; z-index: 3;}
+		#fallorangevase{position:absolute; width:200px; left: 920px; top:3430px; transform:rotate3D(0,0.1,0.2,40deg); z-index: 4;}
+		#falllecturedesk{position:absolute; width:310px; left: 200px; top:520px; transform: rotate3D(0,0.1,0.8,210deg);}
+		#fallcards{position: absolute; width:1100px; left:10px; top:1860px; animation:pprotate 1s infinite alternate; z-index: 2;}
+		#falllamp{position:absolute; width:310px; left: 580px; top:1100px; transform: rotate3D(0.1,0.4,0.3,20deg);}
+		#fallAH{position:absolute; width:300px; left: 500px; top:1000px; transform: rotate3D(0.2,0.3,-0.2,10deg); opacity: 0.4; z-index: -1;}
+		#clockhand1{position:absolute; width:500px; right: 135px; top:4230px; animation: clock 3s infinite; z-index: 3;}
+
+		.s1apple{background-image: url(bg.jpg); background-image: url(bg.jpg); width:1200px; height: 5000px; display: block; margin: auto; position: relative; perspective: 900}
+		.appletable1{position: absolute; width: 650px; left: 24%; top:1350px;}
+		.apple{width: 125px; position: absolute; left: 670px; top: 1270px; }
+		.stackapple{width:300px; position: absolute; left: 450px; top: 1120px;}
+		.gridapple{}
+
+		.wtext{font-family: 'Nanum Myeongjo', serif; font-weight: 600; font-size: 1.8em; color: white; width: 500px; text-align: center;}
+		.btext{font-family: 'Nanum Myeongjo', serif; font-weight: 800; font-size: 1.8em; color: black; width: 500px; text-align: center;}
+		.fadein{animation:fadein 5s infinite;}
+
+		@keyframes aliceshoo{
+			0%{}
+			100%{transform: translate3d(0,0,100px); transform: rotate3D(0.1,0.1,0.9,360deg);}}
+		@keyframes turnon{
+		   	0%{transform:translate(0,0px);}
+  			100%{transform:translate(0,50px); transform: rotate3D(0.1,1.3,0.5,130deg);}
+  		@keyframes turnon2{
+			0%{}
+			100%{transform: translate3d(0,0,100px); transform: rotate3D(0.5,0.5,0.9,360deg);}}
+ 		@keyframes hover{
+		   	0%{top: 1400px;}
+  			100%{top: 1200px;}	
+  		@keyframes fadein {
+  			0% {transform: translateY(0px); opacity: 0;}
+			100% {transform: translateY(20px);opacity: 1;}}
+		@keyframes pprotate{
+			0%{}
+			100%{transform: rotateX(40deg);}}
+		@keyframes clock{
+			0%{}
+			100%{transform: rotate(360deg);}}
+
+	</style>
+</head>
+<body>
+	<section class="intro">
+		<div class="blackcover"></div>
+		<div class="blackdiv700"></div>
+		<div class="blackdiv700"></div>
+	</section>
+	<section>
+		<div class="fall1">
+ 		<div class="blackgradient"></div>
+ 		<h1>슈우우우우웅</h1>
+ 		<img src="door1.png" id="falldoor1">
+ 		<img src="door2.png" id="falldoor2">
+ 		<img src="fallice1.png" class="fallice1">
+ 		<div class="blackgradient_rev"></div>
+ 		<img src="closet.png" id="fallcloset">
+ 		<img src="mirrdraw.png" id="fallmirrdraw">
+ 		<img src="1sofa.png" id="fall1sofa">
+ 		<img src="bigsofa.png" id="fallbigsofa">
+ 		<img src="table.png" id="falltable">
+ 		<img src="wallclock.png" id="fallwallclock">
+ 		<img src="teatable.png" id="fallteatable">
+ 		<img src="stair.png" id="fallstair">
+  		<div class="blackdiv350"></div>
+  		<div class="blackgrad350"></div>
+  		</div>
+ 	</section>
+ 	<section>
+ 			<div class="fall2">
+ 				 <img src="fallback.png" class="fallback">
+ 				<div class="blackgradient"></div>
+ 				<img src="orangevase.png" id="fallorangevase">
+ 				<img src="clockhand1.png" id="clockhand1">
+ 		 		<img src="cards.png" id="fallcards">
+ 				<img src="fallice2.png" class="fallice2">
+ 				<img src="lecturedesk.png" id="falllecturedesk">
+ 				<img src="lamp.png" id="falllamp">
+ 				<img src="AH.png" id="fallAH">
+ 				<p style="position: absolute; left: 100px; top: 400px;" class="wow wtext fadein">토끼를 쫓아 뛰어든 구멍 속,</p>
+ 				<p style="position: absolute; left: 620px; top: 1490px;" class="wow wtext fadein">개연성을 찾아볼 수 없는</p>
+ 				<p style="position: absolute; left: 690px; top: 1530px;" class="wow wtext fadein">무수히 많은 물건들이</p>
+ 				<p style="position: absolute; left: 400px; top: 2100px; z-index: 4px;" class="wow btext fadein">물리의 법칙을 무시한 채<br>그녀 주변에서 어지러이 흩날렸다.</p>
+ 				<div class="paper"></div>
+ 				<img src="fallend.png" style="width: 1200px; top: 2200px; position: absolute; z-index: 4">
+ 			</div>
+ 		</div>
+ 	</section>
+ 	<section>
+ 		<div class="s1apple">
+ 			<img src="fallend.png" style="width: 1200px; top: -600px; position: absolute;">
+ 			<img src="fallingdown.gif" style="width: 500px; top: -800px; left: 30%; position:absolute;">
+ 			<h1>쿵</h1>
+ 			<img src="table.png" class="appletable1">
+ 			<img src="apples.png" class="stackapple">
+			<img src="apple.png" class="apple"> 
+ 		</div>
+ 	</section>
+</body>
+</html>
