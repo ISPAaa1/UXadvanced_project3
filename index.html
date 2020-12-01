@@ -35,7 +35,7 @@
 			background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0) 100%); height: 500px;}
 		.fallice1{position: absolute; width: 300px; left: 40%; top: 470px; animation: aliceshoo 5s infinite linear;}
 
-		#falldoor1{position: absolute; width: 120px; left: 220px; top: -1000px;  animation:turnon 1s infinite alternate;}
+		#falldoor1{position: absolute; width: 120px; left: 220px; top: -1000px;  animation:turnon 1s infinite linear;}
 		#falldoor2{position: absolute; width: 160px; left: 800px; top: -400px;  animation: turnon2 1s infinite linear;}
 		#fallcloset{position: absolute; width: 520px; left: 900px; top: 900px; transform: rotate3D(0.1,0.9,0.8,28deg);}
 		#falltable{position: absolute; width: 500px; left: 970px; top: 1500px; transform: rotate3D(0.0,0.0,0.1,55deg);}
@@ -64,19 +64,25 @@
 		.stackapple{width:300px; position: absolute; left: 450px; top: 1120px;}
 		.gridapple{}
 
+		.absolute{position: absolute; display: block;}
 		.wtext{font-family: 'Nanum Myeongjo', serif; font-weight: 600; font-size: 1.8em; color: white; width: 500px; text-align: center;}
 		.btext{font-family: 'Nanum Myeongjo', serif; font-weight: 800; font-size: 1.8em; color: black; width: 500px; text-align: center;}
-		.fadein{animation:fadein 5s infinite;}
+		.btt{animation:btt 1s; }
+		@keyframes btt{
+			from{opacity: 0; margin-top: 20px;}
+			to{opacity: 1; margin-top: 0px;}}
 
 		@keyframes aliceshoo{
 			0%{}
 			100%{transform: translate3d(0,0,100px); transform: rotate3D(0.1,0.1,0.9,360deg);}}
+		
 		@keyframes turnon{
-		   	0%{transform:translate(0,0px);}
-  			100%{transform:translate(0,50px); transform: rotate3D(0.1,1.3,0.5,130deg);}
+		   	from{}
+  			to{transform: rotate3D(0.1,1.3,0.5,360deg);}}
+
   		@keyframes turnon2{
-			0%{}
-			100%{transform: translate3d(0,0,100px); transform: rotate3D(0.5,0.5,0.9,360deg);}}
+			from{}
+			to{transform: rotate3D(0.1,1.3,0.5,360deg);}}
  		@keyframes hover{
 		   	0%{top: 1400px;}
   			100%{top: 1200px;}	
@@ -129,10 +135,18 @@
  				<img src="lecturedesk.png" id="falllecturedesk">
  				<img src="lamp.png" id="falllamp">
  				<img src="AH.png" id="fallAH">
- 				<p style="position: absolute; left: 100px; top: 400px;" class="wow wtext fadein">토끼를 쫓아 뛰어든 구멍 속,</p>
- 				<p style="position: absolute; left: 620px; top: 1490px;" class="wow wtext fadein">개연성을 찾아볼 수 없는</p>
- 				<p style="position: absolute; left: 690px; top: 1530px;" class="wow wtext fadein">무수히 많은 물건들이</p>
- 				<p style="position: absolute; left: 400px; top: 2100px; z-index: 4px;" class="wow btext fadein">물리의 법칙을 무시한 채<br>그녀 주변에서 어지러이 흩날렸다.</p>
+ 				<div class="absolute" style="left: 100px; top: 400px;">
+ 				<p class="wow wtext btt">토끼를 쫓아 뛰어든 구멍 속,</p>
+ 				</div>
+ 				<div class="absolute" style="left: 620px; top: 1490px;">
+ 				<p class="wow wtext btt">개연성을 찾아볼 수 없는</p>
+ 				</div>
+ 				<div class="absolute" style="left: 690px; top: 1530px;">
+ 				<p class="wow wtext btt">무수히 많은 물건들이</p>
+ 				</div>
+ 				<div class="absolute" style="left: 400px; top: 2100px; z-index: 4px;">
+ 				<p class="wow btext btt">물리의 법칙을 무시한 채<br>그녀 주변에서 어지러이 흩날렸다.</p>
+ 				</div>
  				<div class="paper"></div>
  				<img src="fallend.png" style="width: 1200px; top: 2200px; position: absolute; z-index: 4">
  			</div>
@@ -148,5 +162,8 @@
 			<img src="apple.png" class="apple"> 
  		</div>
  	</section>
+ 	<script type="text/javascript">
+ 		new WOW().init();
+ 	</script>
 </body>
 </html>
