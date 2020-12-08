@@ -11,11 +11,12 @@
     	font-weight: normal;
     	font-style: normal;}
 
+
 		body,h1,h2,h3,p,img,div{margin:0; padding: 0;}
 
 		.intro{position: relative; z-index: 2;}
     	.fall1 h1{font-family: 'Nanum Myeongjo', serif; font-weight: 800; font-size: 10em; color: white; width: 200px; text-align: center; display: block; position: absolute; left: 45%; top:-400px;}
-    	.s1apple h1{font-family: 'Nanum Myeongjo', serif; font-weight: 800; font-size: 50em; color: white; width: 200px; text-align: center; display: block; position: absolute; left: 19%; top:150px;}
+    	.s1apple h1{font-family: 'Nanum Myeongjo', serif; font-weight: 800; font-size: 45em; color: white; width: 200px; text-align: center; display: block; position: absolute; left: 18%; animation: kung 3s forwards;}
 
 		body{background-color: black; overflow-x:hidden; overflow-y:auto;}
 		.blackdiv700{background-color: black; height: 700px;}
@@ -56,21 +57,65 @@
 		#fallcards{position: absolute; width:1100px; left:10px; top:1860px; animation:pprotate 4s infinite alternate; z-index: 2;}
 		#falllamp{position:absolute; width:310px; left: 580px; top:1100px; transform: rotate3D(0.1,0.4,0.3,20deg);}
 		#fallAH{position:absolute; width:300px; left: 500px; top:1000px; transform: rotate3D(0.2,0.3,-0.2,10deg); opacity: 0.4; z-index: -1;}
-		#clockhand1{position:absolute; width:500px; right: 135px; top:4230px; animation: clock 3s infinite; z-index: 3;}
+		#clockhand1{position:absolute; width:500px; right: -40px; top:1430px; animation: clock 3s infinite linear; z-index: 3;}
 
-		.s1apple{background-image: url(bg.jpg); background-image: url(bg.jpg); width:1200px; height: 5000px; display: block; margin: auto; position: relative; perspective: 900}
+		.s1apple{background-image: url(bg.jpg); background-image: url(bg.jpg); width:1200px; height: 5920px; display: block; margin: auto; position: relative; perspective: 900}
 		.appletable1{position: absolute; width: 650px; left: 24%; top:1350px;}
-		.apple{width: 125px; position: absolute; left: 670px; top: 1270px; }
+		.dropapple{width: 150px; position: absolute; left: 670px; top: 1270px; animation: drop 0.5s forwards;}
 		.stackapple{width:300px; position: absolute; left: 450px; top: 1120px;}
-		.gridapple{}
+		.rollin1{position: absolute; width: 140px; opacity: 0; animation: rollin1 3s forwards;}
+		.flash{position: absolute; opacity: 0; animation: flash 1s infinite;}
+		.rollin2{position: absolute; width: 140px; opacity: 0; animation: rollin2 2s forwards; animation-delay: 0.5s;}
+		.rollin3{position: absolute; width: 140px; opacity: 0; animation: rollin3 2s forwards; animation-delay: 0.5s;}
 
 		.absolute{position: absolute; display: block;}
-		.wtext{font-family: 'Nanum Myeongjo', serif; font-weight: 600; font-size: 1.8em; color: white; width: 500px; text-align: center;}
+		.wtext{font-family: 'Nanum Myeongjo', serif; font-weight: 800; font-size: 1.8em; color: white; width: 500px; text-align: center;}
 		.btext{font-family: 'Nanum Myeongjo', serif; font-weight: 800; font-size: 1.8em; color: black; width: 500px; text-align: center;}
-		.btt{animation:btt 1s; }
+		.wtextlong{font-family: 'Nanum Myeongjo', serif; font-weight: 600; font-size: 1.5em; color: white; width: 1000px; line-height: 1.6em;}
+		.brtalk{font-family: 'Cafe24Simplehae'; color: #58382b;}
+		.wtalk{font-family: 'Cafe24Simplehae'; color:white;}
+		.btext{font-family: 'Nanum Myeongjo', serif; font-weight: 800; font-size: 1.8em; color: black; width: 500px; text-align: center;}
+		.btt{animation:btt 1.5s;}
+		.ddd{animation:ddd 0.2s infinite alternate;}
+		.ddd2{animation:ddd2 0.05s infinite alternate;}
+
+		.s2bird{background-image: url(bg.jpg); background-image: url(bg.jpg); width:1200px; height: 4500px; display: block; margin: auto; position: relative; perspective: 900}
+		.tearsection{width: 100%; height:4000px; position: absolute;z-index: 3; top:300px; animation: tear 3s forwards;}
+		.txtblur1{ color: transparent; text-shadow: 0 0 4px white; transition: all 250ms ease-in; }
+		.txtblur2{ color: transparent; text-shadow: 0 0 2px white; transition: all 250ms ease-in; }
+		.opacity{animation: opacity 1s forwards;}
+
 		@keyframes btt{
 			from{opacity: 0; margin-top: 20px;}
 			to{opacity: 1; margin-top: 0px;}}
+
+		@keyframes tear{
+			0%{padding-top: 150px;}
+			30%{padding-top: 0px;}
+			60%{padding-top: 80px;}
+			85%{padding-top: 0px;}
+			100%{padding-top: 10px;}}
+
+		@keyframes flash{
+			from{opacity: 0.3;}
+			to{opacity: 1;}}
+
+		@keyframes drop{
+			0%{left:670px; top:1270px; transform: rotateZ(-5deg);}
+			100%{left:1800px; top:1000px;transform: rotateZ(360deg);}}
+
+		@keyframes rollin1{
+			0%{opacity: 0; right: -300px; top: 2110px; transform: rotateZ(160deg);}
+			1%{opacity: 1; }
+			100%{opacity: 1; right: 60px; top: 2260px; transform: rotateZ(-400deg);}}
+		@keyframes rollin2{
+			0%{opacity: 0; left: -300px; transform: rotateZ(230deg);}
+			1%{opacity: 1; }
+			100%{opacity: 1; left: 150px; transform: rotateZ(1090deg);}}
+		@keyframes rollin3{
+			0%{opacity: 0; right: -300px; transform: rotateZ(110deg);}
+			1%{opacity: 1; }
+			100%{opacity: 1; right: 75px; transform: rotateZ(-420deg);}}
 
 		@keyframes aliceshoo{
 			0%{}
@@ -91,15 +136,36 @@
 		   	0%{margin-top: 0px;}
   			100%{margin-top: 100px;}}
 
-  		@keyframes fadein {
-  			0% {transform: translateY(0px); opacity: 0;}
-			100% {transform: translateY(20px);opacity: 1;}}
+  		@keyframes kung{
+  			0%{opacity: 0; top: -200px;}
+  			40%{opacity: 0; top: -200px;}
+  			46%{opacity: 1; top: 450px;}
+  			85%{opacity: 1; top: 450px;}
+  			100%{opacity: 0; top: 450px;}}
+
 		@keyframes pprotate{
 			0%{transform: rotate3d(-0.1,0.1,0,20deg);}
 			100%{transform: rotate3d(0.1,0.1,1,20deg);}}
 		@keyframes clock{
 			0%{}
 			100%{transform: rotate(360deg);}}
+
+		@keyframes ddd{
+			0%{padding-left:3px; padding-top:5px;}
+			25%{padding-left:0px;padding-top:2px;}
+			50%{padding-left:5px;padding-top:6px;}
+			75%{padding-left:2px;padding-top:0px;}
+			100%{padding-left:6px;padding-top:3px;}}
+		@keyframes ddd2{
+			0%{padding-left:0px;padding-top:1px;}
+			25%{padding-left:6px;padding-top:0px;}
+			50%{padding-left:2px;padding-top:8px;}
+			75%{padding-left:7px;padding-top:3px;}
+			100%{padding-left:3px; padding-top:5px;}}
+
+		@keyframes opacity{
+			0%{opacity: 0;transition: all 0.2s;transform: scale(0.5) }
+			100%{opacity: 1;transform: scale(1);}
 
 	</style>
 </head>
@@ -160,11 +226,67 @@
  	<section>
  		<div class="s1apple">
  			<img src="fallend.png" style="width: 1200px; top: -600px; position: absolute;">
- 			<img src="fallingdown.gif" style="width: 500px; top: -800px; left: 30%; position:absolute;">
- 			<h1>쿵</h1>
+ 			<img src="fallingdown.gif" style="width: 500px; top: -500px; left: 30%; position:absolute;">
+ 			<h1 class="wow">쿵!</h1>
  			<img src="table.png" class="appletable1">
  			<img src="apples.png" class="stackapple">
-			<img src="apple.png" class="apple"> 
+			<img src="apple.png" class="wow dropapple"> 
+			<div class="absolute" style="left: 70px; top: 2000px;text-align: left; z-index: 4px;">
+ 				<p class="wow wtextlong btt">온 땅굴을 울리는 충격에<br>테이블에 쌓여있던 사과들 중 하나가 튕겨나갔다.</p>
+ 			</div>
+ 			<img src="apple.png" class="wow rollin1" style="right: 100px; top:2300px;">
+ 			<img src="click.png" class="wow flash" style="width: 45px; right: 55px; top: 2320px;animation-delay: 2.5s;">
+			<div class="absolute" style="right: 200px; top: 2400px; transform: rotateZ(-20deg); z-index: 4px;">
+ 				<p class="wow brtalk btt" style="text-align: right; font-size: 1.8em; line-height: 1.6em; ">“이런, 실례! 처음 떨어져봐서 밑을 못봤지 뭐야.<br>어서 제자리에 끼워놓아야겠다.”</p>
+ 			</div>
+ 			<img src="gridapple.png" style="position: absolute; width: 800px; left: 100px; top: 2650px; transform: rotateZ(-20deg);">
+ 			<div class="absolute" style="left: 10%; top: 3400px; transform: rotateZ(5deg); z-index: 4px;">
+ 				<p class="wow brtalk btt" style="text-align: center; font-size: 2.3em; ">“<span style="font-size: 2.3em;">으앗!!</span> 손..이 미끄러졌나..?”</p>
+ 			</div>
+ 			<div class="absolute" style="left: 10%; top: 3700px;  z-index: 4px;">
+ 				<p class="wow brtalk btt" style="text-align: center; font-size: 2.3em; ">“그럼 다시...”</p>
+ 			</div>
+ 			<img src="apple.png" class="wow rollin2" style=" left: 15%; top:3750px;">
+ 			<img src="click.png" class="wow flash" style="width: 45px; left:20%; top: 3830px; animation-delay: 1.7s;">
+ 			<div class="absolute" style="left: 42%; top: 4420px;  z-index: 4px;">
+ 				<p class="wow brtalk btt" style="text-align: center; font-size: 3em; ">“아니;;!!!”</p>
+ 			</div>
+ 			<img src="apple.png" class="wow rollin3" style=" right: 15%; top:4550px;">
+ 			<img src="click.png" class="wow flash" style="width: 45px; right:7%; top: 4550px; animation-delay: 1.7s;">
+ 			<div class="wow btt absolute" style="left: 35%; top: 5350px;  z-index: 4px;">
+ 				<p class="brtalk ddd" style="text-align: center; font-size: 4.3em; ">“이익....!!!!!!!”</p>
+ 			</div>
+ 			<div class="wow opacity absolute" style="left: 17%; top: 5720px;  z-index: 5px;">
+ 				<p class="wtalk ddd2" style="text-align: center; font-size: 4.3em; "><span style="font-size: 0.8em;">“사과 너...너 일부러 그러는거지!!!”</span><br><span style="font-size:1.5em;">“흐어어어어엉!!!!!!!”</span></p>
+ 			</div> 			
+ 		</div>
+ 	</section>
+ 	<section>
+ 		<div class="s2bird">
+ 			<div class="blackgradient_rev" style="height: 700px;">
+ 				<img src="crying.gif" style="width: 70%; display: block; margin:auto;">
+ 			</div>
+ 			<div class="tearsection wow">
+ 				<div style="background-image: url(birdbg1.png); height: 1196px;"></div>
+ 				<div style="background-image: url(birdbg2.png); height: 2000px;"></div>
+ 			</div>
+ 			<div class="absolute" style="left: 8%; top: 800px; z-index: 4;">
+ 				<p class="wow wtextlong btt" style="text-align: center;">뜻대로 되지 않자 서러움에 펑펑 울던 앨리스는<br>자신의 눈물에 휩쓸려 어디론가 떠내려가기 시작했다.</p>
+ 			</div>
+ 			<div class="absolute" style="left: 49%; top: 1500px; z-index: 4;">
+ 				<p class="wow wtalk txtblur1 opacity" style="text-align: center; font-size: 1.3em;">"앨리스!"</p>
+ 			</div>
+ 			<div class="absolute" style="left: 48%; top: 1800px; z-index: 4;">
+ 				<p class="wow wtalk txtblur2 opacity" style="text-align: center; font-size: 1.6em;">"앨리스!"</p>
+ 			</div>
+ 			<div class="absolute" style="left: 37.5%; top: 2100px; z-index: 4;">
+ 				<p class="wow wtalk opacity" style="text-align: center; font-size: 2.2em;">"우리랑 놀자 똑딱똑딱!</p>
+ 			</div>
+ 			<div class="absolute" style="left: 35%; top: 2150px; z-index: 4;">
+ 				<p class="wow wtalk opacity" style="text-align: center; font-size: 2.7em;">우리랑 돌자 빙글빙글!"</p>
+ 			</div>
+ 			<img src="transclock1.gif" class="absolute" style="width: 400px; top:2300px; left: 34%; z-index: 4;">
+ 			<
  		</div>
  	</section>
  	<script type="text/javascript">
@@ -172,3 +294,4 @@
  	</script>
 </body>
 </html>
+
