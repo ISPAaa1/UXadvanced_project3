@@ -10,7 +10,7 @@
     	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff');
     	font-weight: normal;
     	font-style: normal;}
-
+    	html{scroll-behavior: smooth;}
 
 		body,h1,h2,h3,p,img,div{margin:0; padding: 0;}
 
@@ -76,6 +76,8 @@
 		.wtalk{font-family: 'Cafe24Simplehae'; color:white;}
 		.btext{font-family: 'Nanum Myeongjo', serif; font-weight: 800; font-size: 1.8em; color: black; width: 500px; text-align: center;}
 		.btt{animation:btt 1.5s;}
+		.rtl{animation:rtl 3s;}
+		.rtl2{animation:rtl2 5s forwards; animation-delay: 2.2s;}	
 		.ddd{animation:ddd 0.2s infinite alternate;}
 		.ddd2{animation:ddd2 0.05s infinite alternate;}
 
@@ -83,11 +85,84 @@
 		.tearsection{width: 100%; height:4000px; position: absolute;z-index: 3; top:300px; animation: tear 3s forwards;}
 		.txtblur1{ color: transparent; text-shadow: 0 0 4px white; transition: all 250ms ease-in; }
 		.txtblur2{ color: transparent; text-shadow: 0 0 2px white; transition: all 250ms ease-in; }
-		.opacity{animation: opacity 1s forwards;}
+		.opacity{animation: opacity 1s forwards; animation-delay: 0.3s;}
+		#applerun1{animation: applerun1 0.7s forwards paused;}
+		#applerun2{animation: applerun2 0.7s forwards paused;}
+		#applerun3{animation: applerun3 0.7s forwards paused;}
+		.birdcenter{width: 100px; height: 100px; position: absolute; left: 46.8%; top: 2450px; animation: birdcenter 6s infinite linear;z-index: 3;}
+		.birdcenter2{width: 100px; height: 100px; position: absolute; left: 46.8%; top: 2450px; animation: birdcenter 6s infinite linear;z-index: 3; animation-delay: 2s;}
+		.birdcenter3{width: 100px; height: 100px; position: absolute; left: 41%; top: 2430px; animation: birdcenter 6s infinite linear;z-index: 3; animation-delay: 4s;}
+		.birdtroll{transform: translateX(230px); padding-left: 80px; width: 130px;}
+		.birdshift{transform: translate(200px); width: 140px;}
+
+		.s2forest{background-image: url(bg.jpg); width:1200px; height: 7500px; display: block; margin: auto; position: relative; perspective: 900;}
+		.leftsigns{animation: leftsigns 2s forwards;}
+		.rightsigns{animation: rightsigns 2s forwards;}
+		#thatway{animation: thatway 2.5s forwards; animation-delay: 0.5s; opacity: 0;}
+		#ang{position: absolute; right: 20%; top:3920px; animation: ang 0.1s forwards; animation-delay: 4s; visibility: hidden;}
+		#thatway:hover{transform: rotateZ(110deg);}
+		#thatway:hover + #ang{visibility: visible;}
+		#angryalice{}
+		#meme{width: 55%; left: 60%; top: 10px; opacity: 0.08;}
+		#angryalice:hover +#meme{opacity: 0.7;}
+		#meme:hover {opacity: 0.7;}
+
+		.ending{background-color: black;); width:1200px; height: 4000px; display: block; margin: auto; position: relative;}
+
+		.wakeup{background-image: url(sleeping.jpg); background-size: 1200px; height: 1600px;width:1200px; display: block; margin: auto; position: relative;}
+		.grass{background-image: url(grass.jpg); width:1200px; height: 5000px; display: block; margin: auto; position: relative; margin-top: 670px;}
+		.ltr2{animation:ltr2 5s forwards;}
+		.onlyopacity{animation: onlyopacity 1s forwards; animation-delay: 0.3s;}
+		.epilogueh3{display: block; position: absolute; font-family:'Nanum Myeongjo', serif; font-weight: 800; font-size: 2.1em; color: black; width: 430px; text-align: center;}
+		.epiloguep{display: block; position: absolute; font-family:'Nanum Myeongjo', serif; font-weight: 600; font-size: 1.2em; color: black; width: 430px; letter-spacing: -0.03em; line-height: 1.6em; text-align: left;}
+		.restart{cursor: pointer;" onclick="location.href='index.html';}
+		#top{position: absolute; opacity: 0.3; font-size: 1.8em;}
+		#watch:hover {animation: watchrun 0.5s infinite linear;}
+		#watch:hover + #top {opacity: 1; font-size: 2.4em;}
+
+		@keyframes watchrun{
+			to{transform: rotateZ(-720deg);}}
+		@keyframes leftsigns{
+			from{opacity: 0; left: 0px;}
+			to{opacity: 1; left: 30%;}}
+		@keyframes rightsigns{
+			from{opacity: 0; right: 0px;}
+			to{opacity: 1; right: 30%;}}
+		@keyframes thatway{
+			from{opacity: 0; right: 0px;}
+			to{opacity: 1; right: 20%;}}
+		@keyframes ang{
+			from{opacity: 0;}
+			to{opacity: 1;}}
+
+		@keyframes birdcenter{to{transform: rotate(360deg);}}
+
+		@keyframes applerun1{
+			from{margin-top:0px; margin-left: : 0px; transform: rotateZ(0);}
+			to{margin-top:690px; margin-left:-925px; transform: rotateZ(-430deg);}}
+		@keyframes applerun2{
+			from{margin-top:0px; margin-left: 0px; transform: rotateZ(0);}
+			to{margin-top:400px; margin-left: 1500px; transform: rotateZ(400deg);}}
+		@keyframes applerun3{
+			from{margin-top:0px; margin-left: : 0px; transform: rotateZ(0);}
+			to{margin-top:-300px; margin-left:-2000px; transform: rotateZ(-430deg);}}
 
 		@keyframes btt{
 			from{opacity: 0; margin-top: 20px;}
 			to{opacity: 1; margin-top: 0px;}}
+		@keyframes rtl{
+			0%{opacity: 0; right: -200px;}
+			25%{opacity: 1; right: 0px;}
+			75%{opacity: 1; right: 0px;}
+			100%{opacity: 0; right: -200px;}}
+		@keyframes rtl2{
+			0%{opacity: 0; right: -200px;}
+			20%{opacity: 1; right: 0px;}
+			100%{opacity: 1; right: 0px;}}
+		@keyframes ltr2{
+			0%{opacity: 0; left: -200px;}
+			20%{opacity: 1; left: 0px;}
+			100%{opacity: 1; left: 0px;}}
 
 		@keyframes tear{
 			0%{padding-top: 150px;}
@@ -115,7 +190,7 @@
 		@keyframes rollin3{
 			0%{opacity: 0; right: -300px; transform: rotateZ(110deg);}
 			1%{opacity: 1; }
-			100%{opacity: 1; right: 75px; transform: rotateZ(-420deg);}}
+			100%{opacity: 1; right: 75px; transform: rotateZ(-400deg);}}
 
 		@keyframes aliceshoo{
 			0%{}
@@ -164,8 +239,11 @@
 			100%{padding-left:3px; padding-top:5px;}}
 
 		@keyframes opacity{
-			0%{opacity: 0;transition: all 0.2s;transform: scale(0.5) }
-			100%{opacity: 1;transform: scale(1);}
+			0%{opacity: 0;transition: all 0.2s;transform: scale(0.5)}
+			100%{opacity: 1;transform: scale(1);}}
+		@keyframes onlyopacity{
+			0%{opacity: 0;transition: all 0.2s;}
+			100%{opacity: 1;}
 
 	</style>
 </head>
@@ -196,31 +274,30 @@
   		</div>
  	</section>
  	<section>
- 			<div class="fall2">
- 				 <img src="fallback.png" class="fallback">
- 				<div class="blackgradient"></div>
- 				<img src="orangevase.png" id="fallorangevase">
- 				<img src="clockhand1.png" id="clockhand1">
- 		 		<img src="cards.png" id="fallcards">
- 				<img src="fallice2.png" class="fallice2">
- 				<img src="lecturedesk.png" id="falllecturedesk">
- 				<img src="lamp.png" id="falllamp">
- 				<img src="AH.png" id="fallAH">
- 				<div class="absolute" style="left: 100px; top: 400px;">
- 				<p class="wow wtext btt">토끼를 쫓아 뛰어든 구멍 속,</p>
- 				</div>
- 				<div class="absolute" style="left: 620px; top: 1490px;">
- 				<p class="wow wtext btt">개연성을 찾아볼 수 없는</p>
- 				</div>
- 				<div class="absolute" style="left: 690px; top: 1530px;">
- 				<p class="wow wtext btt">무수히 많은 물건들이</p>
- 				</div>
- 				<div class="absolute" style="left: 400px; top: 2100px; z-index: 4px;">
- 				<p class="wow btext btt">물리의 법칙을 무시한 채<br>그녀 주변에서 어지러이 흩날렸다.</p>
- 				</div>
- 				<div class="paper"></div>
- 				<img src="fallend.png" style="width: 1200px; top: 2200px; position: absolute; z-index: 4">
+ 		<div class="fall2">
+ 			<img src="fallback.png" class="fallback">
+ 			<div class="blackgradient"></div>
+ 			<img src="orangevase.png" id="fallorangevase">
+ 			<img src="clockhand1.png" id="clockhand1">
+ 			<img src="cards.png" id="fallcards">
+ 			<img src="fallice2.png" class="fallice2">
+ 			<img src="lecturedesk.png" id="falllecturedesk">
+ 			<img src="lamp.png" id="falllamp">
+ 			<img src="AH.png" id="fallAH">
+ 			<div class="absolute" style="left: 100px; top: 400px;">
+ 			<p class="wow wtext btt">토끼를 쫓아 뛰어든 구멍 속,</p>
  			</div>
+ 			<div class="absolute" style="left: 620px; top: 1490px;">
+ 			<p class="wow wtext btt">개연성을 찾아볼 수 없는</p>
+ 			</div>
+ 			<div class="absolute" style="left: 690px; top: 1530px;">
+ 			<p class="wow wtext btt">무수히 많은 물건들이</p>
+ 			</div>
+ 			<div class="absolute" style="left: 400px; top: 2100px; z-index: 4;">
+ 			<p class="wow btext btt">물리의 법칙을 무시한 채<br>그녀 주변에서 어지러이 흩날렸다.</p>
+ 			</div>
+ 			<div class="paper"></div>
+ 			<img src="fallend.png" style="width: 1200px; top: 2200px; position: absolute; z-index: 4">
  		</div>
  	</section>
  	<section>
@@ -234,29 +311,35 @@
 			<div class="absolute" style="left: 70px; top: 2000px;text-align: left; z-index: 4px;">
  				<p class="wow wtextlong btt">온 땅굴을 울리는 충격에<br>테이블에 쌓여있던 사과들 중 하나가 튕겨나갔다.</p>
  			</div>
- 			<img src="apple.png" class="wow rollin1" style="right: 100px; top:2300px;">
+ 			<div class="wow rollin1" style="right: 100px; top:2300px;">
+ 				<img src="apple.png" id="applerun1" style="width: 140px; cursor:pointer; animation-play-state: paused;">
+ 			</div>
  			<img src="click.png" class="wow flash" style="width: 45px; right: 55px; top: 2320px;animation-delay: 2.5s;">
 			<div class="absolute" style="right: 200px; top: 2400px; transform: rotateZ(-20deg); z-index: 4px;">
  				<p class="wow brtalk btt" style="text-align: right; font-size: 1.8em; line-height: 1.6em; ">“이런, 실례! 처음 떨어져봐서 밑을 못봤지 뭐야.<br>어서 제자리에 끼워놓아야겠다.”</p>
  			</div>
  			<img src="gridapple.png" style="position: absolute; width: 800px; left: 100px; top: 2650px; transform: rotateZ(-20deg);">
- 			<div class="absolute" style="left: 10%; top: 3400px; transform: rotateZ(5deg); z-index: 4px;">
+ 			<div class="absolute" style="right: 10%; top: 3500px; transform: rotateZ(-2deg); z-index: 4px;">
  				<p class="wow brtalk btt" style="text-align: center; font-size: 2.3em; ">“<span style="font-size: 2.3em;">으앗!!</span> 손..이 미끄러졌나..?”</p>
  			</div>
  			<div class="absolute" style="left: 10%; top: 3700px;  z-index: 4px;">
  				<p class="wow brtalk btt" style="text-align: center; font-size: 2.3em; ">“그럼 다시...”</p>
  			</div>
- 			<img src="apple.png" class="wow rollin2" style=" left: 15%; top:3750px;">
+ 			<div class="wow rollin2" style=" left: 15%; top:3750px;">
+ 				<img src="apple.png" id="applerun2" style="width: 140px; cursor:pointer; animation-play-state: paused;">
+ 			</div>
  			<img src="click.png" class="wow flash" style="width: 45px; left:20%; top: 3830px; animation-delay: 1.7s;">
  			<div class="absolute" style="left: 42%; top: 4420px;  z-index: 4px;">
  				<p class="wow brtalk btt" style="text-align: center; font-size: 3em; ">“아니;;!!!”</p>
  			</div>
- 			<img src="apple.png" class="wow rollin3" style=" right: 15%; top:4550px;">
- 			<img src="click.png" class="wow flash" style="width: 45px; right:7%; top: 4550px; animation-delay: 1.7s;">
+ 			<div class="wow rollin3" style=" right: 15%; top:4550px;">
+ 				<img src="apple.png" id="applerun3" style="width: 140px; cursor:pointer; animation-play-state: paused;">
+ 			</div>
+ 			<img src="click.png" class="wow flash" style="width: 45px; right:6%; top: 4620px; animation-delay: 1.7s;">
  			<div class="wow btt absolute" style="left: 35%; top: 5350px;  z-index: 4px;">
  				<p class="brtalk ddd" style="text-align: center; font-size: 4.3em; ">“이익....!!!!!!!”</p>
  			</div>
- 			<div class="wow opacity absolute" style="left: 17%; top: 5720px;  z-index: 5px;">
+ 			<div class="wow opacity absolute" style="left: 17%; top: 5720px; opacity: 0; z-index: 5px;">
  				<p class="wtalk ddd2" style="text-align: center; font-size: 4.3em; "><span style="font-size: 0.8em;">“사과 너...너 일부러 그러는거지!!!”</span><br><span style="font-size:1.5em;">“흐어어어어엉!!!!!!!”</span></p>
  			</div> 			
  		</div>
@@ -274,24 +357,152 @@
  				<p class="wow wtextlong btt" style="text-align: center;">뜻대로 되지 않자 서러움에 펑펑 울던 앨리스는<br>자신의 눈물에 휩쓸려 어디론가 떠내려가기 시작했다.</p>
  			</div>
  			<div class="absolute" style="left: 49%; top: 1500px; z-index: 4;">
- 				<p class="wow wtalk txtblur1 opacity" style="text-align: center; font-size: 1.3em;">"앨리스!"</p>
+ 				<p class="wow wtalk txtblur1 opacity" style="opacity: 0; text-align: center; font-size: 1.3em;">"앨리스!"</p>
  			</div>
  			<div class="absolute" style="left: 48%; top: 1800px; z-index: 4;">
- 				<p class="wow wtalk txtblur2 opacity" style="text-align: center; font-size: 1.6em;">"앨리스!"</p>
+ 				<p class="wow wtalk txtblur2 opacity" style="opacity: 0; text-align: center; font-size: 1.6em;">"앨리스!"</p>
  			</div>
  			<div class="absolute" style="left: 37.5%; top: 2100px; z-index: 4;">
- 				<p class="wow wtalk opacity" style="text-align: center; font-size: 2.2em;">"우리랑 놀자 똑딱똑딱!</p>
+ 				<p class="wow wtalk opacity" style="opacity: 0; text-align: center; font-size: 2.2em;">"우리랑 놀자 똑딱똑딱!</p>
  			</div>
  			<div class="absolute" style="left: 35%; top: 2150px; z-index: 4;">
- 				<p class="wow wtalk opacity" style="text-align: center; font-size: 2.7em;">우리랑 돌자 빙글빙글!"</p>
+ 				<p class="wow wtalk opacity" style="opacity: 0; text-align: center; font-size: 2.7em;">우리랑 돌자 빙글빙글!"</p>
  			</div>
- 			<img src="transclock1.gif" class="absolute" style="width: 400px; top:2300px; left: 34%; z-index: 4;">
- 			<
+ 			<img src="transclock1.gif" class="absolute applerun1" style="width: 400px; top:2300px; left: 34%; z-index: 4;">
+ 			<div class="birdcenter">
+ 				<img src="bluebird1.png" class="birdshift">
+ 			</div>
+ 			<div class="birdcenter2">
+ 				<img src="bluebird2.png" class="birdshift">
+ 			</div>
+ 			<div class="birdcenter3">
+ 				<img src="bluebird3.png" class="birdtroll">
+ 			</div>
+ 			<div class="absolute" style="left: 390px; top: 3000px; z-index: 4;">
+ 				<p class="wow wtext btt">하지만...</p>
+ 			</div>
+ 			<img src="">
+ 			<div class="absolute blackgradient_rev" style="width:1200px; height: 310px; top: 3200px; z-index: 4;"></div>
+ 			<div class="absolute black" style="width:1200px; height: 1000px; top: 3500px; z-index: 4;"></div>
+ 			<img src="birdangry.png" class="absolute wow rtl" style="width: 80%; right:-200; opacity: 0; top:3500px; z-index: 4;">
+ 			<img src="birdangry2.png" class="absolute wow rtl2" style="width: 80%; right:-200; opacity: 0; top:3500px; z-index: 4;">
  		</div>
  	</section>
+ 	<section>
+ 		<div class="s2forest">
+ 			<div class="black" style="height: 600px;">
+ 			<div class="absolute" style="left: 10%; z-index: 4;">
+ 				<p class="wow wtextlong btt" style="text-align: center;">앨리스는 꽥꽥 노래를 불러대는 새들이 넌더리난다는 듯<br> 고개를 내저으며 해안가 숲으로 들어가버렸다.</p>
+ 			</div>
+ 			<div class="absolute" style="left: 10%; top: 500px; z-index: 4;">
+ 				<p class="wow wtextlong btt" style="text-align: center;">그리고 그 안에서 그녀를 맞이한 것은</p>
+ 			</div>
+ 			<img src="wood.jpg" style="width: 100%; margin-top:585px;">
+ 			<div class="absolute" style="left: 10%; top: 1400px; z-index: 4;">
+ 				<p class="wow wtextlong btt" style="text-align: center;">정렬과 깔끔함 따위는 찾아볼 수 없이 널브러진 수많은 이정표들이었다.</p>
+ 			</div>
+ 			<img src="badsigns.png" class="absolute" style="width: 75%; top: 1620px; left: 12%;">
+ 			<img src="hmm.gif" class="absolute" style="top:2040px; left: 38%;">
+ 			<div class="absolute" style="left: 32%; top: 2400px; z-index: 4;">
+ 				<p class="wow wtalk btt" style="text-align: center; font-size: 1.8em;">"흐으음... 이거 도저히 그냥 못두겠는걸.."</p>
+ 			</div>
+ 			<div class="absolute" style="left: 49%; top: 2800px; z-index: 4;">
+ 				<p class="wow wtalk btt" style="text-align: center; font-size: 1.2em;">"... ..."</p>
+ 			</div>
+ 			<div class="absolute" style="left: 41%; top: 2845px; z-index: 4;">
+ 				<p class="wow wtalk btt" style="text-align: center; font-size: 1.5em;">"이렇게 이렇게 정리하면..."</p>
+ 			</div>
+ 			<div class="absolute" style="left: 33%; top: 3300px; z-index: 4;">
+ 				<p class="wow wtalk opacity" style="opacity: 0; text-align: center; font-size: 2.3em;">"...크으으, 바로 이거ㅈ..! ..응?"</p>
+ 			</div>
+ 			<img src="leftsigns.png" class="absolute leftsigns wow" style="width:40%; top:3500px;">
+ 			<img src="rightsigns.png" class="absolute rightsigns wow" style="width:40%; top:3500px; right: 0; opacity: 0;">
+ 			<img src="thatway.png" class="absolute wow" id="thatway" style="width: 24.6%; top: 3880px; right: 0; opacity: 0;">
+ 			<div id="ang" style="opacity: 0;">
+ 				<p class="wtalk absolute" style=" font-size: 4em; color: red;"> "엥????" </p>
+ 			</div>
+ 			<div class="absolute wow btt" style="opacity:0; animation-delay: 0.8s; animation-fill-mode: forwards; left: 9%; top: 4200px;">
+ 				<img src="angryalice.png" id="angryalice" class="ddd">
+ 				<img src="meme.png" id="meme" class="absolute">
+ 			</div>
+ 			<div class="wow absolute btt" style="left: 42%; top: 4400px; z-index: 4;">
+ 				<p class="wtalk ddd" style=" font-size: 2.4em; color: red;">"꺄악 진짜!!!! 거슬린다고!!!!!<br> 이건 또 왜 이러는거야 대체!!!!!!!"</p>
+ 			</div>
+ 			<div class="black absolute wow btt" style="animation-duration: 0.5s; animation-delay: 1.5s; animation-fill-mode: forwards; width: 100%; height: 3000px; top: 4700px; opacity: 0;">
+ 			</div>	
+ 			<div class="absolute" style="left: 30%; top: 6000px; z-index: 4;">
+ 			<p class="wow wtext" style="font-size: 3em; text-align: center; forwards;">그때,</p>
+ 			</div>
+ 			<img src="heartqueen.png" class="absolute wow btt" style="width: 100%; top: 6600px; z-index: 4;">
+ 			<div class="absolute" style="left: 70px; top: 7300px; text-align: left; z-index: 4px;">
+ 				<h1 class="wow wtextlong opacity" style="font-size: 4em; width: 100%; opacity: 0; z-index: ">"감히 내 정원을 망가뜨린 놈이 누구냐!!!"</h1>
+ 			</div>
+ 		</div>
+ 	</section>
+ 	<section>
+ 		<div class="ending">
+ 		<img src="heartqueencall.png" class="absolute wow btt" style="width: 60%; top: 400px; left: 20%; z-index: 4;">
+ 			<div class="absolute" style="left: 28%; top: 1020px; text-align: left; z-index: 4px;">
+ 				<h1 class="wow wtextlong opacity" style="font-size: 3em; width: 100%; opacity: 0; z-index: ">"옳지, 바로 네놈이로구나."</h1>
+ 			</div>
+ 			<div class="absolute wow opacity" style="left: 25%; top: 1750px; opacity: 0; text-align: left; z-index: 4px;">
+ 				<h1 class="wtextlong ddd2" style="font-size: 8em; width: 100%;  z-index: ">"사형!!!!!!!"</h1>
+ 			</div>
+ 			<div class="absolute" style="left: 48%; top: 2900px; z-index: 4;">
+ 				<p class="wow wtalk txtblur2 opacity" style="opacity: 0; text-align: center; font-size: 2em;">아, 안돼...!"</p>
+ 			</div>
+ 			<div class="absolute" style="left: 49%; top: 4000px; z-index: 4;">
+ 				<p class="wow wtalk txtblur1 opacity" style="opacity: 0; text-align: center; font-size: 1.3em;">"앨리스!"</p>
+ 			</div>
+ 		</div>
+ 	</section>
+ 	<section>
+ 		<div class="wakeup">
+ 			<div class="absolute" style="left: 48%; top: 200px; z-index: 4;">
+ 				<p class="wow wtalk txtblur2 opacity" style="opacity: 0; text-align: center; font-size: 2em;">"앨리스!"</p>
+ 			</div>
+ 			<div class="blackgradient" style="height: 300px;"></div>
+ 			<p class="wow absolute wtalk btt" style="text-align: center; font-size: 2.3em; height: 1000px; left: 43%; top: 850px; z-index: 4;">"..으음... 어..?"</p>
+ 			<div class="grass">
+ 			</div>
+ 			<div class="absolute" style="width: 1300px; left: -30px; top: 640px;">
+ 				<img src="bush.png" style="width: 100%; ">
+ 			</div>
+ 			<img src="wakeup.jpg" class="wow absolute rtl2" style="right: 100px; top: 1300px; opacity: 0; animation-delay: 0s;">
+ 			<p class="wow absolute wtalk btt" style="text-align: right; font-size: 3em; height: 300px; right: 50%; top: 1500px; z-index: 4; color: black;">"흐어앗!!! 헉헉..."</p>
+ 			<img src="sister.jpg" class="wow absolute ltr2" style="width: 45%; left: 100px; top: 2000px; opacity: 0">
+ 			<p class="wow absolute wtalk btt" style="text-align: left; font-size: 2.3em; height: 300px; left:48%; top: 2130px; z-index: 4; color: black; line-height: 1.3em;">"안좋은 꿈이라도 꿨니, 앨리스?<br>아주 세상 모르고 자더구나."</p>
+ 			<p class="wow absolute wtalk btt" style="text-align: left; font-size: 2.3em; height: 300px; left:48%; top: 2250px; z-index: 4; color: black; line-height: 1.3em;">"나와 독서를 한 것 치고는 땀이 흥건한걸."</p>
+ 			<p class="wow absolute wtalk btt" style="text-align: center; font-size: 3em; height: 300px; left: 28%; top: 3000px; z-index: 4; line-height: 1.3em; color: black;">"..으응, 휴.....<br>정말, 너무 끔찍한 꿈이었어..."</p>
+ 			<img src="oldbook.png" class="absolute wow onlyopacity" style="left: 33%; top: 3600px; opacity: 0;">
+ 			<h2 class="btext absolute wow onlyopacity" style="font-size: 3.2em; left: 30%; top: 3920px; opacity: 0;">-END-</h2>
+
+ 			<div class="absolute wow btt" style="left: 20%; top: 5000px;width: 70%;">
+ 				<img src="memo.png" style="position: absolute; width: 70%; transform: rotateZ(-13deg); animation-duration: 5s;">
+				<div id="watch" style="position: absolute; width: 37%; left: 54%; top: 340px; animation-duration: 5s;"><a href=#><img src="watch.png" ></a></div>
+				<div class="btext" id="top" style="left:42.5%; top: 650px;"><h3>TOP</h3></div>
+				<h3 class="epilogueh3" style="top: 50px; transform: rotateZ(-13deg); padding-top: 60px; padding-left: 1%;">강박장애란?</h3>
+				<p class="epiloguep" style="top: 20px; transform: rotateZ(-13deg); padding-left: 8%; padding-top: 170px;">강박장애(強迫障礙/強迫障碍, 영어: Obsessive-Compulsive Disorder, OCD)는 자신의 의지와는 상관없이 어떤 특정한 사고나 행동을 떨쳐버리고 싶은데도 시도 때도 없이 반복적으로 하게 되는 상태를 말한다.
+				<br><br>이 이야기는 만약 앨리스가 사소한 일상의 어긋남과 불규칙성에 견디지 못하는 이 강박증을 가졌다면 원더랜드에서 얼마나 많이 스트레스를 받을까하는 상상에서 시작되었다. <br><br>..혹시 이 페이지를 보는 동안 <br>당신도 분노를 느꼈다면,...
+				<br><br>으악, 잠깐..!! 진정해..!!!!!!
+				<br>– =͟͟͞͞ =͟͟͞͞ ﾍ( ´Д`)ﾉ</p>
+ 			</div>
+ 			<div class="absolute" style="left: 30%; top: 5900px; z-index: 4;">
+ 			<p class="btext" style="font-weight: 400; font-size: 1em; top: 1000px;">Copyright 2020. Juna Won. all rights reserved.</p>
+ 			</div>
+ 		</div>
+ 	</section>
+
+
  	<script type="text/javascript">
  		new WOW().init();
  	</script>
+ 	<script type="text/javascript">
+		applerun1.onclick = function(){applerun1.style.animationPlayState = "running"; }
+		applerun2.onclick = function(){applerun2.style.animationPlayState = "running"; }
+		applerun3.onclick = function(){applerun3.style.animationPlayState = "running"; }
+	</script>
+
 </body>
 </html>
 
